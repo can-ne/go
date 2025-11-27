@@ -19,14 +19,14 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project directory structure: backend/, frontend/, docker-compose.yml
-- [ ] T002 Initialize frontend with Vite + React + TypeScript in frontend/
-- [ ] T003 [P] Initialize backend with Node.js + Express + TypeScript in backend/
-- [ ] T004 [P] Setup PostgreSQL database with Docker in docker-compose.yml
-- [ ] T005 [P] Initialize Prisma ORM in backend/prisma/schema.prisma
+- [X] T001 Create project directory structure: backend/, frontend/, docker-compose.yml
+- [X] T002 Initialize frontend with Vite + React + TypeScript in frontend/
+- [X] T003 [P] Initialize backend with Node.js + Express + TypeScript in backend/
+- [X] T004 [P] Setup PostgreSQL database with Docker in docker-compose.yml
+- [X] T005 [P] Initialize Prisma ORM in backend/prisma/schema.prisma
 - [ ] T006 [P] Configure ESLint and Prettier for both frontend and backend
 - [ ] T007 [P] Setup Git hooks for linting in .husky/
-- [ ] T008 Create README.md with setup instructions from quickstart.md
+- [X] T008 Create README.md with setup instructions from quickstart.md
 
 ---
 
@@ -36,18 +36,18 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T009 Implement Prisma schema from data-model.md in backend/prisma/schema.prisma
-- [ ] T010 Generate Prisma client and run initial migration in backend/
-- [ ] T011 [P] Create Express server setup in backend/src/index.ts
-- [ ] T012 [P] Setup CORS and middleware in backend/src/index.ts
-- [ ] T013 [P] Create error handling utilities in backend/src/utils/errors.ts
-- [ ] T014 [P] Create validation utilities in backend/src/utils/validation.ts
-- [ ] T015 [P] Setup React Router in frontend/src/App.tsx
-- [ ] T016 [P] Create TypeScript type definitions in frontend/src/types/index.ts
-- [ ] T017 [P] Create API client service in frontend/src/services/api.ts
-- [ ] T018 [P] Create base Zustand store structure in frontend/src/stores/
-- [ ] T019 [P] Configure Vite environment variables in frontend/.env
-- [ ] T020 [P] Configure backend environment variables in backend/.env
+- [X] T009 Implement Prisma schema from data-model.md in backend/prisma/schema.prisma
+- [X] T010 Generate Prisma client and run initial migration in backend/
+- [X] T011 [P] Create Express server setup in backend/src/index.ts
+- [X] T012 [P] Setup CORS and middleware in backend/src/index.ts
+- [X] T013 [P] Create error handling utilities in backend/src/utils/errors.ts
+- [X] T014 [P] Create validation utilities in backend/src/utils/validation.ts
+- [X] T015 [P] Setup React Router in frontend/src/App.tsx
+- [X] T016 [P] Create TypeScript type definitions in frontend/src/types/index.ts
+- [X] T017 [P] Create API client service in frontend/src/services/api.ts
+- [X] T018 [P] Create base Zustand store structure in frontend/src/stores/
+- [X] T019 [P] Configure Vite environment variables in frontend/.env
+- [X] T020 [P] Configure backend environment variables in backend/.env
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -61,53 +61,53 @@
 
 ### Backend Implementation for User Story 1
 
-- [ ] T021 [P] [US1] Create whiteboard service in backend/src/services/whiteboard.service.ts
-- [ ] T022 [P] [US1] Create element service in backend/src/services/element.service.ts
-- [ ] T023 [US1] Implement POST /api/v1/whiteboards endpoint in backend/src/routes/whiteboards.ts
-- [ ] T024 [US1] Implement GET /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
-- [ ] T025 [US1] Implement PATCH /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
-- [ ] T026 [US1] Implement DELETE /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
-- [ ] T027 [US1] Add request validation for all whiteboard endpoints in backend/src/routes/whiteboards.ts
-- [ ] T028 [US1] Register whiteboard routes in backend/src/index.ts
+- [X] T021 [P] [US1] Create whiteboard service in backend/src/services/whiteboard.service.ts
+- [X] T022 [P] [US1] Create element service in backend/src/services/element.service.ts
+- [X] T023 [US1] Implement POST /api/v1/whiteboards endpoint in backend/src/routes/whiteboards.ts
+- [X] T024 [US1] Implement GET /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
+- [X] T025 [US1] Implement PATCH /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
+- [X] T026 [US1] Implement DELETE /api/v1/whiteboards/:id endpoint in backend/src/routes/whiteboards.ts
+- [X] T027 [US1] Add request validation for all whiteboard endpoints in backend/src/routes/whiteboards.ts
+- [X] T028 [US1] Register whiteboard routes in backend/src/index.ts
 
 ### Frontend - Canvas Core for User Story 1
 
-- [ ] T029 [P] [US1] Create Whiteboard page component in frontend/src/pages/Whiteboard.tsx
-- [ ] T030 [P] [US1] Create Canvas component with HTML5 canvas ref in frontend/src/components/Canvas.tsx
-- [ ] T031 [US1] Implement PointerEvent handlers (down, move, up) in frontend/src/components/Canvas.tsx
-- [ ] T032 [US1] Create canvas drawing utilities in frontend/src/utils/canvas.ts
+- [X] T029 [P] [US1] Create Whiteboard page component in frontend/src/pages/Whiteboard.tsx
+- [X] T030 [P] [US1] Create Canvas component with HTML5 canvas ref in frontend/src/components/Canvas.tsx
+- [X] T031 [US1] Implement PointerEvent handlers (down, move, up) in frontend/src/components/Canvas.tsx
+- [X] T032 [US1] Create canvas drawing utilities in frontend/src/utils/canvas.ts
 - [ ] T033 [US1] Create geometry calculation utilities in frontend/src/utils/geometry.ts
 
 ### Frontend - Drawing Tools for User Story 1
 
-- [ ] T034 [P] [US1] Implement pen/freehand drawing in frontend/src/components/Canvas.tsx
-- [ ] T035 [P] [US1] Implement line drawing in frontend/src/components/Canvas.tsx
-- [ ] T036 [P] [US1] Implement rectangle drawing in frontend/src/components/Canvas.tsx
-- [ ] T037 [P] [US1] Implement circle drawing in frontend/src/components/Canvas.tsx
-- [ ] T038 [US1] Implement text tool with input overlay in frontend/src/components/Canvas.tsx
+- [X] T034 [P] [US1] Implement pen/freehand drawing in frontend/src/components/Canvas.tsx
+- [X] T035 [P] [US1] Implement line drawing in frontend/src/components/Canvas.tsx
+- [X] T036 [P] [US1] Implement rectangle drawing in frontend/src/components/Canvas.tsx
+- [X] T037 [P] [US1] Implement circle drawing in frontend/src/components/Canvas.tsx
+- [X] T038 [US1] Implement text tool with input overlay in frontend/src/components/Canvas.tsx
 - [ ] T039 [US1] Implement eraser tool in frontend/src/components/Canvas.tsx
 
 ### Frontend - Toolbar for User Story 1
 
-- [ ] T040 [US1] Create Toolbar component in frontend/src/components/Toolbar.tsx
-- [ ] T041 [US1] Add tool selection buttons (pen, line, rectangle, circle, text, eraser) in frontend/src/components/Toolbar.tsx
-- [ ] T042 [US1] Create ColorPicker component (minimum 8 colors) in frontend/src/components/ColorPicker.tsx
-- [ ] T043 [US1] Add stroke width selector (1-20px) in frontend/src/components/Toolbar.tsx
-- [ ] T044 [US1] Implement tool selection state in Zustand store in frontend/src/stores/whiteboardStore.ts
+- [X] T040 [US1] Create Toolbar component in frontend/src/components/Toolbar.tsx
+- [X] T041 [US1] Add tool selection buttons (pen, line, rectangle, circle, text, eraser) in frontend/src/components/Toolbar.tsx
+- [X] T042 [US1] Create ColorPicker component (minimum 8 colors) in frontend/src/components/Toolbar.tsx
+- [X] T043 [US1] Add stroke width selector (1-20px) in frontend/src/components/Toolbar.tsx
+- [X] T044 [US1] Implement tool selection state in Zustand store in frontend/src/stores/whiteboardStore.ts
 
 ### Frontend - Canvas Controls for User Story 1
 
-- [ ] T045 [US1] Implement zoom controls (10%-400%) with mouse wheel in frontend/src/components/Canvas.tsx
-- [ ] T046 [US1] Implement pan functionality (drag with middle mouse or touch) in frontend/src/components/Canvas.tsx
-- [ ] T047 [US1] Add zoom buttons (+/-) to toolbar in frontend/src/components/Toolbar.tsx
-- [ ] T048 [US1] Maintain canvas transform state (zoom, pan offset) in frontend/src/stores/whiteboardStore.ts
-- [ ] T049 [US1] Ensure drawings scale correctly with zoom in frontend/src/components/Canvas.tsx
+- [X] T045 [US1] Implement zoom controls (10%-400%) with mouse wheel in frontend/src/components/Canvas.tsx
+- [X] T046 [US1] Implement pan functionality (drag with middle mouse or touch) in frontend/src/components/Canvas.tsx
+- [X] T047 [US1] Add zoom buttons (+/-) to toolbar in frontend/src/components/Toolbar.tsx
+- [X] T048 [US1] Maintain canvas transform state (zoom, pan offset) in frontend/src/stores/whiteboardStore.ts
+- [X] T049 [US1] Ensure drawings scale correctly with zoom in frontend/src/components/Canvas.tsx
 
 ### Frontend - Persistence for User Story 1
 
-- [ ] T050 [US1] Create elements state in Zustand store in frontend/src/stores/whiteboardStore.ts
-- [ ] T051 [US1] Send element create actions to REST API in frontend/src/services/api.ts
-- [ ] T052 [US1] Load whiteboard elements on page load in frontend/src/pages/Whiteboard.tsx
+- [X] T050 [US1] Create elements state in Zustand store in frontend/src/stores/whiteboardStore.ts
+- [X] T051 [US1] Send element create actions to REST API in frontend/src/services/api.ts
+- [X] T052 [US1] Load whiteboard elements on page load in frontend/src/pages/Whiteboard.tsx
 - [ ] T053 [US1] Handle element delete via API in frontend/src/services/api.ts
 
 **Checkpoint**: User Story 1 complete - basic single-user whiteboard functional and testable

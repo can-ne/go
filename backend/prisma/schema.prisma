@@ -1,0 +1,81 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Whiteboard {
+  id        String   @id @default(uuid()) @db.Uuid
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  title     String?  @db.VarChar(100)
+  thumbnail String?  @db.Text
+
+  elements       Element[]
+  drawingActions DrawingAction[]
+
+  @@map("whiteboards")
+}
+
+model Element {
+  id           String   @id @default(uuid()) @db.Uuid
+  whiteboardId String   @map("whiteboard_id") @db.Uuid
+  type         String   @db.VarChar(20)
+  x            Float    @db.DoublePrecision
+  y            Float    @db.DoublePrecision
+  width        Float?   @db.DoublePrecision
+  height       Float?   @db.DoublePrecision
+  points       Json?    @db.JsonB
+  color        String   @db.VarChar(7)
+  strokeWidth  Int      @map("stroke_width")
+  content      String?  @db.Text
+  fontSize     Int?     @map("font_size")
+  zIndex       Int      @default(0) @map("z_index")
+  creatorId    String   @map("creator_id") @db.Uuid
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  whiteboard     Whiteboard      @relation(fields: [whiteboardId], references: [id], onDelete: Cascade)
+  creator        User            @relation(fields: [creatorId], references: [id])
+  drawingActions DrawingAction[]
+
+  @@index([whiteboardId], name: "idx_elements_whiteboard")
+  @@index([whiteboardId, zIndex], name: "idx_elements_zindex")
+  @@map("elements")
+}
+
+model User {
+  id         String   @id @default(uuid()) @db.Uuid
+  name       String   @default("Anonymous User") @db.VarChar(50)
+  color      String   @db.VarChar(7)
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  lastSeenAt DateTime @default(now()) @map("last_seen_at") @db.Timestamptz(6)
+
+  elements       Element[]
+  drawingActions DrawingAction[]
+
+  @@map("users")
+}
+
+model DrawingAction {
+  id           String   @id @default(uuid()) @db.Uuid
+  whiteboardId String   @map("whiteboard_id") @db.Uuid
+  userId       String   @map("user_id") @db.Uuid
+  actionType   String   @map("action_type") @db.VarChar(20)
+  elementId    String   @map("element_id") @db.Uuid
+  beforeState  Json?    @map("before_state") @db.JsonB
+  afterState   Json?    @map("after_state") @db.JsonB
+  timestamp    DateTime @default(now()) @db.Timestamptz(6)
+
+  whiteboard Whiteboard @relation(fields: [whiteboardId], references: [id], onDelete: Cascade)
+  user       User       @relation(fields: [userId], references: [id])
+  element    Element    @relation(fields: [elementId], references: [id])
+
+  @@index([whiteboardId, timestamp], name: "idx_actions_whiteboard_time")
+  @@map("drawing_actions")
+}
